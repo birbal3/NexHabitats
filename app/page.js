@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <CompanySection />
       <AboutComponent />
+      <CompanySection />
       <CatalogueSection />
       <CatalogSwiperSection />
       <ContactSection />

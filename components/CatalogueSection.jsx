@@ -10,6 +10,7 @@ export default function CatalogueSection() {
             title: "Cossy Bedroom Setup",
             image: "/image/badroom.jpg",
             description: "family drowing room with a clean and comfortable design for your family.",
+            color:"#555879"
         },
         {
             id: "02",
@@ -17,6 +18,7 @@ export default function CatalogueSection() {
             title: "Neat & Clean Kitchen",
             image: "/image/kitchen1.jpg",
             description: "family drowing room with a clean and comfortable design for your family.",
+            color:"#98A1BC"
         },
         {
             id: "03",
@@ -24,6 +26,7 @@ export default function CatalogueSection() {
             title: "Family Drowing Room",
             image: "/image/drowing.jpg",
             description: "family drowing room with a clean and comfortable design for your family.",
+            color:"#DED3C4"
         },
         {
             id: "04",
@@ -31,6 +34,7 @@ export default function CatalogueSection() {
             title: "Clean Family Room",
             image: "/image/living.jpg",
             description: "family drowing room with a clean and comfortable design for your family.",
+            color:"#F4EBD3"
         },
     ]
 
@@ -51,13 +55,18 @@ export default function CatalogueSection() {
                         <a className="inline-flex items-center font-medium" href="">See Details <TbArrowNarrowRight className="ml-2 text-xl " /></a>
                     </div>
 
-                    <div className="inset-0 flex-col items-center justify-end hidden gap-32 pb-16 text-xl transition duration-300 ease-in-out border-b-2 md:flex md:absolute group-hover:translate-y-full md:border-b-0 bg-zinc-100">
-                        <p className="tracking-wider -rotate-90 ">{item.catagory} </p>
-                        <span className="">
-                            {item.id}
-                        </span>
+                   <div
+                    className="relative inset-0 flex-col items-center justify-end hidden gap-32 pb-16 text-xl transition duration-700 ease-in-out border-b-2 md:flex md:absolute group-hover:translate-y-full md:border-b-0 before:content-[''] before:absolute before:inset-0 before:bg-cover before:bg-center before:opacity-100 before:z-0 z-0"
+                    style={{
+                        backgroundColor: item.color, 
+                    }}
+                    >
 
+                    <p className="tracking-wider -rotate-90 z-0">{item.catagory}</p>
+                    <span className="z-0">{item.id}</span>
                     </div>
+
+
                 </div>
             ))}
         </div>
